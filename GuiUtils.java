@@ -11,7 +11,8 @@ public class GuiUtils {
 	/*
 	 * get handle for webdriver with a specific browser instance
 	 */
-	public WebDriver getBrowserDriver(String browser) {
+	
+public WebDriver getBrowserDriver(String browser) {
 		
 		WebDriver driver = null;
 		
@@ -24,6 +25,7 @@ public class GuiUtils {
 		//
 	
 	}
+	
 	
 	public void clickElementByXpath(WebDriver driver, String xpath) throws InterruptedException {
 		Thread.sleep(1000);
@@ -48,7 +50,16 @@ public class GuiUtils {
 		Thread.sleep(1000);
 		WebElement textBox = driver.findElement(By.xpath(xpath));
 		textBox.click();
+		textBox.clear();
+		Thread.sleep(1000);
 		textBox.sendKeys(textInput);
+	}
+	
+	public boolean elementExists(WebDriver driver, String xpath) throws InterruptedException {
+		Thread.sleep(1000);
+		WebElement textBox = driver.findElement(By.xpath(xpath));
+		boolean exists = textBox.isDisplayed();
+		return exists;
 	}
 	
 	public String readElementByXpath(WebDriver driver, String xpath) throws InterruptedException {

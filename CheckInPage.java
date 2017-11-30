@@ -62,8 +62,9 @@ public class CheckInPage {
 		sb.append(gu.readElementByXpath(driver, Variables.DIV3_P2_XPATH) + "\n");
 		sb.append(gu.readElementByXpath(driver, Variables.DIV3_P3_XPATH) + "\n");
 		sb.append(gu.readElementByXpath(driver, Variables.DIV3_P4_XPATH) + "\n");
-		//sb.append(gu.readElementByXpath(driver, Variables.DIV3_P5_XPATH) + "\n");
-		sb.append(gu.readElementByXpath(driver, Variables.TRY_AGAIN_XPATH));
+		sb.append(gu.readElementByXpath(driver, Variables.DIV3_P5_XPATH) + "\n");
+		sb.append(gu.readElementByXpath(driver, Variables.DIV3_P6_XPATH) + "\n");
+		//sb.append(gu.readElementByXpath(driver, Variables.TRY_AGAIN_XPATH));
 		return sb.toString();
 	}
 	
